@@ -36,17 +36,52 @@ class MyHome extends StatelessWidget {
           SizedBox(width: 20),
         ],
       ),
-      body: Container(
-        alignment: Alignment.center,
-        margin: EdgeInsets.only(top: 30),
-        decoration: BoxDecoration(
-          color: Colors.black,
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        child: const Text(
-          "Tugas Ivan Darma Saputra",
-          style: TextStyle(color: Colors.white),
-        ),
+      body: Column(
+        children: [
+          Container(
+            width: 150,
+            height: 150,
+            alignment: Alignment.center,
+            margin: EdgeInsets.all(15),
+
+            decoration: BoxDecoration(
+              color: Colors.lightBlueAccent,
+              gradient: LinearGradient(
+                colors: [
+                  const Color.fromARGB(255, 178, 33, 231),
+                  const Color.fromARGB(255, 18, 92, 10),
+                ],
+              ),
+            ),
+
+            child: Text(
+              "box 1",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+
+          Container(
+            width: 150,
+            height: 150,
+            alignment: Alignment.center,
+            margin: EdgeInsets.all(15),
+
+            decoration: BoxDecoration(color: Colors.lightBlueAccent),
+
+            child: Text(
+              "box kedua",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
