@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Contoh AppBar',
-      // debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       home: const MyHome(),
     );
   }
@@ -24,17 +24,19 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Title"),
+        title: const Text("My app banget"),
+        foregroundColor: Colors.black,
         backgroundColor: Colors.blue,
         actions: const [
-          Icon(Icons.person),
+          Icon(Icons.person, color: Colors.white),
           SizedBox(width: 10),
-          Icon(Icons.account_box),
-          Icon(Icons.ac_unit),
+          Icon(Icons.account_box, color: Colors.white),
           SizedBox(width: 10),
+          Icon(Icons.ac_unit, color: Colors.white),
+          SizedBox(width: 20),
         ],
       ),
-      body: const Center(child: Text("Halo, Flutter!")),
+      body: Container(color: Colors.amber, child: Text("data")),
     );
   }
 }
