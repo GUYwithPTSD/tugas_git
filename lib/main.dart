@@ -9,7 +9,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MyHome();
+    return MaterialApp(
+      title: 'Contoh AppBar',
+      // debugShowCheckedModeBanner: false,
+      home: const MyHome(),
+    );
   }
 }
 
@@ -20,9 +24,9 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Title"),
+        title: const Text("Title"),
         backgroundColor: Colors.blue,
-        actions: [
+        actions: const [
           Icon(Icons.person),
           SizedBox(width: 10),
           Icon(Icons.account_box),
@@ -30,6 +34,7 @@ class MyHome extends StatelessWidget {
           SizedBox(width: 10),
         ],
       ),
+      body: const Center(child: Text("Halo, Flutter!")),
     );
   }
 }
