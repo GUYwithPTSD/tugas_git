@@ -36,7 +36,13 @@ class MyHome extends StatelessWidget {
           SizedBox(width: 20),
         ],
       ),
-      body: Container(color: Colors.amber, child: Text("data")),
+      body: Container(
+        alignment: Alignment.center,
+        height: double.infinity,
+        width: double.infinity,
+        color: Colors.black,
+        child: const Text("data", style: TextStyle(color: Colors.white)),
+      ),
     );
   }
 }
