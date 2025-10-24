@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MyHome();
   }
 }
 
@@ -19,7 +19,17 @@ class MyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Title"), backgroundColor: Colors.blue),
+      appBar: AppBar(
+        title: Text("Title"),
+        backgroundColor: Colors.blue,
+        actions: [
+          Icon(Icons.person),
+          SizedBox(width: 10),
+          Icon(Icons.account_box),
+          Icon(Icons.ac_unit),
+          SizedBox(width: 10),
+        ],
+      ),
     );
   }
 }
