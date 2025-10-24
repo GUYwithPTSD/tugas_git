@@ -38,10 +38,15 @@ class MyHome extends StatelessWidget {
       ),
       body: Container(
         alignment: Alignment.center,
-        height: double.infinity,
-        width: double.infinity,
-        color: Colors.black,
-        child: const Text("data", style: TextStyle(color: Colors.white)),
+        margin: EdgeInsets.only(top: 30),
+        decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        child: const Text(
+          "Tugas Ivan Darma Saputra",
+          style: TextStyle(color: Colors.white),
+        ),
       ),
     );
   }
