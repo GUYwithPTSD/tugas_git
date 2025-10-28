@@ -70,10 +70,45 @@ class MyHome extends StatelessWidget {
             alignment: Alignment.center,
             margin: EdgeInsets.all(15),
 
-            decoration: BoxDecoration(color: Colors.lightBlueAccent),
+            decoration: BoxDecoration(
+              image: const DecorationImage(
+                image:
+                    // AssetImage('asset/images/besok_aja.jpeg'),
+                    NetworkImage(
+                      "https://cdn.pixabay.com/photo/2016/09/08/18/45/cube-1655118_640.jpg",
+                    ),
+                fit: BoxFit.cover,
+              ),
+              borderRadius: BorderRadius.circular(10),
+            ),
 
             child: Text(
               "box kedua",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+
+          Container(
+            transform: Matrix4.rotationZ(0.5),
+            width: 150,
+            height: 150,
+            alignment: Alignment.center,
+            margin: EdgeInsets.all(15),
+
+            decoration: BoxDecoration(
+              image: const DecorationImage(
+                image: AssetImage('../assets/images/pohon.jpg'),
+                fit: BoxFit.cover,
+              ),
+              borderRadius: BorderRadius.circular(10),
+            ),
+
+            child: Text(
+              "box ketiga",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
